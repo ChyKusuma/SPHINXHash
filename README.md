@@ -18,9 +18,9 @@ During the NIST hash function competition in 2008, SWIFFTX was submitted as a ca
 
 The SWIFFTX compression functions are designed with simplicity and mathematical elegance, which facilitates analysis and optimization. Notably, they possess two unique characteristics:
 
-Asymptotic Security Proof: It is formally proven that finding a collision in a randomly-selected SWIFFTX compression function is at least as difficult as finding short vectors in cyclic/ideal lattices in the worst-case scenario. This provides a strong foundation for its security guarantees.
+1. Asymptotic Security Proof: It is formally proven that finding a collision in a randomly-selected SWIFFTX compression function is at least as difficult as finding short vectors in cyclic/ideal lattices in the worst-case scenario. This provides a strong foundation for its security guarantees.
 
-High Parallelizability: SWIFFTX's compression function enables efficient implementations on modern microprocessors, even without relying on multi-core capabilities. This is achieved through an innovative cryptographic utilization of the Fast Fourier Transform (FFT).
+2. High Parallelizability: SWIFFTX's compression function enables efficient implementations on modern microprocessors, even without relying on multi-core capabilities. This is achieved through an innovative cryptographic utilization of the Fast Fourier Transform (FFT).
 
 The core component of SWIFFTX is the SWIFFT family of compression functions, initially introduced in the 2008 workshop on Fast Software Encryption (Lyubashevsky et al., FSE’08). Careful attention was given to address a major drawback of SWIFFT, which is linearity, while preserving its provable collision resistance.
 
