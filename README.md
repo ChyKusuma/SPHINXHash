@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project is dedicated to the world community as an Open-source Post-quantum SPHINXChain blockchain, means anyone can join and contribute based on his/ her passion and skills. SPHINX is a blockchain protocol designed to provide secure and scalable solutions in the post-quantum era.
+This project is dedicated to the world community as an Open-source Post-quantum blockchain layer 1 project, means anyone can join and contribute based on his/ her passion and skills. SPHINX is a blockchain protocol designed to provide secure and scalable solutions in the post-quantum era.
 
 This repository contains code for the SPHINXHash project, which is a mining module for the SPHINX blockchain framework. The SPHINXHash aims to provide a `Hash function` in the blockchain systems
 
@@ -74,14 +74,15 @@ The arrangement of these 195 bytes, 5 bytes corresponding to S-box(0) are append
 This 1600-bit output serves as the input for the subsequent SWIFFT. The output of this SWIFFT is then passed through the ConvertToBytes function, resulting in 520 bits. These bits can either be fed into the next compression function or directed to the FinalTransform function (described below).
 
 
-### More detil about SWIFFTX you can find the document here [SWIFFTX](https://github.com/ChyKusuma/SPHINXHash/blob/main/SWIFFTX_Report.pdf)
-
-
 ### FinalTransform
 
 The output of SWIFFTX, while almost regularly distributed over the domain `Z64`, needs to be uniformly distributed over `Z512` for the entire hash function. However, when converted to 65 bytes using the ConvertToBytes function, the resulting 520 bits exhibit statistical bias. To address this, after processing the final block of the input, it is necessary to convert these 520 skewed bits into 512 uniformly-distributed bits. Our objective is to preserve the security proof while achieving this transformation, which is achieved by performing an operation equivalent to evaluating an additional SWIFFT function with a 520-bit input.
 
 To accomplish this, 520 bits to 576 bits by padding them with zero bits. Next, we break these bits into 9 groups of 64 bits, treating each group as a polynomial  `'xi'` of degree at most 63. We leverage the 576 randomizer elements that were previously created and create 9 polynomials `'pi'`. Then, we compute the expression `x0p0 + x1p1 + ... + x8p8` over the ring `Z256[α]/(α64 + 1)`. The result is a polynomial of degree 63 whose coefficients are elements modulo 256, representing bytes. This process ensures the generation of the required 512 bits for the final transformed output.
+
+### More detil about SWIFFTX
+
+Find the document here [SWIFFTX](https://github.com/ChyKusuma/SPHINXHash/blob/main/SWIFFTX_Report.pdf)
 
 
 ### NOTE
