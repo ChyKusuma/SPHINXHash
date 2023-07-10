@@ -33,7 +33,9 @@ The core component of SWIFFTX is the SWIFFT family of compression functions, ini
 Specifically, the SWIFFTX compression function maps 2048 input bits to 520 output bits. The chosen mode of operation is HAIFA (Biham and Dunkelman, 2007), resulting in a hash function capable of accommodating inputs of any length up to 264 − 1 bits. The resulting message digests align with the required lengths of SHA-3, including 224, 256, 384, and 512 bits.
 
 
-### The main component of the SWIFFTX compression function is the SWIFFT function. It takes a specific input format and produces a sequence of values as output. Here is a description of the SWIFFT function:
+### The main component of the SWIFFTX compression function is the SWIFFT function. 
+
+It takes a specific input format and produces a sequence of values as output. Here is a description of the SWIFFT function:
 
 Input Format:
 The SWIFFT function takes `m = 32` (or in one special case, `m = 25`) 64-bit words, denoted as `x1,...,xm,` resulting in a total of 2048 (or 1600) bits. These words are indexed by fixed "randomizer" elements `a1,0, . . . , am,63 ∈ Z257,` which are uniformly random integers modulo 257.
