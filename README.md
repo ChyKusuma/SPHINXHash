@@ -80,7 +80,7 @@ The arrangement of these 195 bytes, 5 bytes corresponding to S-box(0) are append
 This 1600-bit output serves as the input for the subsequent SWIFFT. The output of this SWIFFT is then passed through the ConvertToBytes function, resulting in 520 bits. These bits can either be fed into the next compression function or directed to the FinalTransform function (described below).
 
 
-More detil about SWIFFTX you can find the document here [SWIFFTX](https://github.com/ChyKusuma/SPHINXHash/blob/main/SWIFFTX_Report.pdf)
+### More detil about SWIFFTX you can find the document here [SWIFFTX](https://github.com/ChyKusuma/SPHINXHash/blob/main/SWIFFTX_Report.pdf)
 
 
 ### FinalTransform
@@ -101,7 +101,7 @@ We appreciate your understanding and look forward to collaborative efforts in sh
 ## Getting Started
 To get started with the SPHINX blockchain project, follow the instructions below:
 
-1. Clone the repository: `git clone https://github.com/ChyKusuma/SPHINXChain.git`
+1. Clone the repository: `git clone https://github.com/ChyKusuma/SPHINXHash.git`
 2. Install the necessary dependencies (List the dependencies or provide a link to the installation guide).
 3. Explore the codebase to understand the project structure and components.
 4. Run the project or make modifications as needed.
