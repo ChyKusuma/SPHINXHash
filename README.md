@@ -9,15 +9,16 @@ This repository contains code for the SPHINXHash project, which is a mining modu
 ## Components
 
 ### A lattice-based construction
+
 In cryptography, SWIFFT is a collection of provably secure hash functions based on the concept of the fast Fourier transform (FFT). It distinguishes itself by providing a mathematical proof of its security and utilizing the LLL basis reduction algorithm. SWIFFT's security is linked to the difficulty of finding short vectors in cyclic/ideal lattices, making collision finding a challenging task. This property offers a stronger security guarantee compared to most other cryptographic hash functions.
 
 Despite its provable security and desirable cryptographic and statistical properties, SWIFFT is not designed as a general-purpose hash function. It does not function as a pseudorandom function and is not suitable for applications requiring a random oracle. While SWIFFT achieves a reasonable throughput of 40Mbit/s on a 3.2 GHz Intel Pentium 4, it is less efficient than traditional hash functions that lack provable collision-resistance. As a result, SWIFFT finds practical use in scenarios where the proof of collision-resistance holds significant value, such as long-term trustworthy digital signatures.
 
 A modified version of SWIFFT called SWIFFTX was proposed as a candidate for the SHA-3 function in the NIST hash function competition. However, it was not selected in the first round of evaluations. Today we known that `Lattice-Based` cryptographic algorithms are gaining attention as promising solutions to mitigate security risks posed by quantum computers.
 
-[SPHINXHash](https://github.com/ChyKusuma/SPHINXHash) utilizes the HAIFA (HAsh Iterative FrAmework) construction, which involves iteratively applying a compression function to the input data. The compression function in SWIFFTX is based on ideal lattices, which are mathematical structures with desirable properties for cryptographic purposes.
+[SPHINXHash](https://github.com/ChyKusuma/SPHINXHash) utilizes the [SWIFFTX](https://github.com/ChyKusuma/SPHINXHash/blob/main/SWIFFTX_Report.pdf) as main hash function, its involves iteratively applying a compression function to the input data. The compression function in SWIFFTX is based on ideal lattices, which are mathematical structures with desirable properties for cryptographic purposes.
 
-The HAIFA (HAsh Iterative FrAmework) construction, combined with the use of ideal lattices, allows SWIFFTX to achieve its cryptographic goals, such as collision resistance and preimage resistance.
+[SWIFFTX](https://github.com/ChyKusuma/SPHINXHash/blob/main/SWIFFTX_Report.pdf) rely on the HAIFA (HAsh Iterative FrAmework) construction, combined with the use of ideal lattices, allows SWIFFTX to achieve its cryptographic goals, such as collision resistance and preimage resistance.
 
 During the NIST hash function competition in 2008, SWIFFTX was submitted as a candidate along with other hash functions, as mentioned earlier. While it did not advance to the final round of the competition, SWIFFTX's utilization of ideal lattices and the HAIFA construction contributed to the broader research and understanding of hash function design.
 
@@ -75,6 +76,9 @@ The output of the three SWIFFT functions is fed into the ConvertToBytes function
 The arrangement of these 195 bytes, 5 bytes corresponding to S-box(0) are appended, resulting in a total of 200 bytes or 1600 bits.
 
 This 1600-bit output serves as the input for the subsequent SWIFFT. The output of this SWIFFT is then passed through the ConvertToBytes function, resulting in 520 bits. These bits can either be fed into the next compression function or directed to the FinalTransform function (described below).
+
+
+More detil about SWIFFTX you can find the document here [SWIFFTX](https://github.com/ChyKusuma/SPHINXHash/blob/main/SWIFFTX_Report.pdf)
 
 
 ### FinalTransform
