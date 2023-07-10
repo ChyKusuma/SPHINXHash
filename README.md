@@ -10,7 +10,7 @@ This repository contains code for the SPHINXHash project, which is a mining modu
 
 ### A lattice-based construction
 
-Today the world well known that `Lattice-Based` cryptographic algorithms are gaining attention as promising solutions to mitigate security risks posed by quantum computers, [SPHINXHash](https://github.com/ChyKusuma/SPHINXHash) utilizes the [SWIFFTX](https://github.com/ChyKusuma/SPHINXHash/blob/main/SWIFFTX_Report.pdf) as main hash function, its involves iteratively applying a compression function to the input data. The compression function in SWIFFTX is based on ideal lattices, which are mathematical structures with desirable properties for cryptographic purposes.
+Today the world well known that `Lattice-Based` cryptographic algorithms are gaining attention as promising solutions to mitigate security risks posed by quantum computers, [SPHINXHash](https://github.com/ChyKusuma/SPHINXHash) utilizes the 256 digest size of [SWIFFTX](https://github.com/ChyKusuma/SPHINXHash/blob/main/SWIFFTX_Report.pdf) as main hash function, its involves iteratively applying a compression function to the input data. The compression function in SWIFFTX is based on ideal lattices, which are mathematical structures with desirable properties for cryptographic purposes.
 
 [SWIFFTX](https://github.com/ChyKusuma/SPHINXHash/blob/main/SWIFFTX_Report.pdf) rely on the HAIFA (HAsh Iterative FrAmework) construction, combined with the use of ideal lattices, allows SWIFFTX to achieve its cryptographic goals, such as collision resistance and preimage resistance.
 
