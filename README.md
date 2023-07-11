@@ -4,7 +4,7 @@
 
 This project is dedicated to the world community as an Open-source Post-quantum blockchain layer 1 project, means anyone can join and contribute based on his/ her passion and skills. SPHINX is a blockchain protocol designed to provide secure and scalable solutions in the post-quantum era.
 
-This repository contains code for the SPHINXHash project, which is a mining module for the SPHINX blockchain framework. The SPHINXHash aims to provide a `Hash function` in the blockchain systems
+This repository contains code for the SPHINXHash project, which is a Hashing module for the SPHINX blockchain framework. The SPHINXHash aims to provide a `Hash function` in the blockchain systems
 
 ## Components
 
