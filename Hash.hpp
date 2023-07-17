@@ -67,8 +67,7 @@ std::string SPHINX_256(const std::string& message) {
 
     return result;
       // This line returns the resulting hash value as a hexadecimal string.
-}
-
+  }
 } // namespace SPHINXHash
 
 #endif // HASH_HPP
