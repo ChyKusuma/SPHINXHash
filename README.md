@@ -14,7 +14,7 @@ Today the world well known that `Lattice-Based` cryptographic algorithms are gai
 
 [SWIFFTX](https://github.com/ChyKusuma/SPHINXHash/blob/main/SWIFFTX_Report.pdf) rely on the HAIFA (HAsh Iterative FrAmework) construction, combined with the use of ideal lattices, allows SWIFFTX to achieve its cryptographic goals, such as collision resistance and preimage resistance.
 
-During the NIST hash function competition in 2008, SWIFFTX was submitted as a candidate along with other hash functions, as mentioned earlier. While it did not advance to the final round of the competition, SWIFFTX's utilization of ideal lattices and the HAIFA construction contributed to the broader research and understanding of hash function design.
+During the [NIST hash function competition in 2008](https://csrc.nist.gov/pubs/ir/7620/final) , SWIFFTX was submitted as a candidate along with other hash functions, as mentioned earlier. While it did not advance to the final round of the competition, SWIFFTX's utilization of ideal lattices and the HAIFA construction contributed to the broader research and understanding of hash function design.
 
 The SWIFFTX compression functions are designed with simplicity and mathematical elegance, which facilitates analysis and optimization. Notably, they possess two unique characteristics:
 
